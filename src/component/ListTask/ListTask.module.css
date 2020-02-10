@@ -1,0 +1,293 @@
+.app{
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+}
+
+.body{
+    display: grid;
+    width: 95vw;
+    height: 95vh;
+    grid-template-areas: "head"
+    "body"
+    "blockPages";
+    grid-template-rows: 1fr 19fr;
+
+}
+
+.login{
+    justify-content: flex-end;
+    display: flex;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    cursor: pointer;
+}
+
+.head_panel{
+    display: grid;
+    grid-area: head;
+    grid-template-areas:"blockAdd blockFilter";
+    grid-template-columns: 1fr 1fr;
+}
+
+.block_add{
+    grid-area:blockAdd;
+    display: grid;
+    width: 33%;
+}
+.bt_add{ 
+    background: #3128f9;
+    color:white;
+}
+
+.block_filter{
+    grid-area:blockFilter;
+    display: grid;
+    justify-content: flex-end;
+    grid-template-areas: "label name mail status sortOrder";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.bt_label{
+    grid-area:label;
+    align-self: center;
+}
+
+.bt_name{
+    grid-area:name; 
+    cursor: pointer; 
+}
+.bt_mail{
+    grid-area:mail;
+    cursor: pointer; 
+}
+.bt_status{
+    grid-area:status;
+    cursor: pointer; 
+}
+
+.sort_order{
+    grid-area:sortOrder;
+    cursor: pointer;  
+}
+
+.list_task{
+    border: 2px solid grey;
+    grid-area: body;
+    padding: 0px;
+    background: white;
+}
+
+.item_task,.item_task_active{
+    margin: 0px;
+    grid-area:blockFilter;
+    display: grid;
+    justify-content: flex-end;
+    grid-template-areas: "colName colMail colText colStatus";
+    grid-template-columns: 3fr 3fr 10fr 1fr;
+    border-bottom: var(--border);
+    cursor: pointer;
+}
+
+.item_mail,.item_text,.item_status,.item_name,
+.item_mail_active,.item_text_active,.item_status_active,.item_name_active{
+    font-size:15px;
+    border:none;
+    display: grid;
+    resize: none;
+    padding: 3px;
+    outline: none;
+    cursor: pointer;
+}
+
+.item_mail_active,.item_text_active,.item_status_active,.item_name_active,.item_task_active{
+    background: #c9d2ef;  
+    cursor: pointer;
+}
+
+.item_name{
+    grid-area:colName;
+    cursor: pointer;
+}
+
+.item_mail{
+    grid-area:colMail;
+    cursor: pointer;
+}
+
+.item_text{
+    grid-area:colText;
+    cursor: pointer;
+}
+
+.item_status{
+    grid-area:colStatus;
+    cursor: pointer;
+}
+
+.item_status_item_red, .item_status_item_green{
+    grid-area:colStatus;  
+    justify-self: center;
+    align-self: center;
+}
+
+.item_status_item_green{
+    background: #3128f9;
+}
+
+.block_pages{
+   grid-area:blockPages;
+   display: inline-flex; 
+   list-style-type:none;
+}
+
+.container{
+    grid-area:blockPages;
+    display: inline-flex; 
+    list-style-type:none;
+    align-items: center;
+}
+
+.page,.page_next{
+    border: 2px solid #3128f9;
+    cursor: pointer;
+    width: 30px;
+    height: 30PX;
+    text-align: center;
+    border-radius: 100%;
+    background: inherit;
+    justify-items: center;
+    align-items: center;
+    display: grid;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.page_next
+{
+    border: 2px solid white;
+    color: white;   
+}
+.page_active{
+    background: #3128f9;
+    border: 2px solid white;
+    color: white;
+}
+
+.a_style,
+.a_style:focus,
+.a_style:active{
+    width: 100%;
+    outline: none;
+    display: block;
+    border-radius: 100%;
+}
+
+
+
+.bt_action{
+    background: #3128f9;
+    color:white;
+}
+
+.header{
+    text-align: center;
+    background: #dadfec;
+    border: var(--border);
+  }
+
+.border{
+    border: var(--border);
+  }
+
+
+.blur{
+    width: 100vw;
+    background: #000000a6;
+    height: 100vh;
+    display: grid;
+    position: absolute;
+    align-content: center;
+    justify-content: center;
+}
+
+.modal{
+    width: 40vw;
+    background: #c7bfbf;
+    height: 50vh;
+    display: grid;
+    grid-template-areas: "blockName"
+    "blockMail"
+    "blockText"
+    "blockElementBt";
+    grid-template-rows: 2fr 2fr 5fr 2fr;
+    align-items: center;
+    padding: 1vw;
+    border:var(--border);
+}
+
+.block_name, .block_mail{
+    grid-template-areas:"nameSmsLabel nameSms"
+    "errorInput errorInput";
+    grid-template-columns: 1fr 5fr;
+    display: grid;
+}
+
+.block_name{
+    grid-area:blockName;
+}
+
+.name_sms_label{
+    grid-area: nameSmsLabel;
+}
+
+.name_sms{
+    grid-area: nameSms;
+}
+
+.error{
+    grid-area: errorInput
+}
+
+.block_mail{
+    grid-area:blockMail;
+}
+
+
+.block_text{
+    grid-area:blockText;
+    grid-template-areas:"textSmsLabel" 
+    "textSms"
+    "errorTextarea";
+    grid-template-rows: 1fr 5fr 1fr;
+    display: grid;
+    
+}
+
+.text_sms_label{
+    grid-area: textSmsLabel;
+    display: grid;
+    align-items: center;
+}
+
+.text_sms{
+    grid-area: textSms;
+    resize: none;
+}
+
+.error_text{
+    grid-area: errorTextarea;
+}
+
+.block_elem_bt{
+     grid-area:blockElementBt;
+     min-height: 40px;
+}
+
+.addItmes{
+    min-height: 40px;
+}
+
+.cancel{
+    min-height: 40px;
+}

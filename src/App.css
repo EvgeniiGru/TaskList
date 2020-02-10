@@ -1,0 +1,38 @@
+:root{
+  --border: 1px solid #40423d ;
+  --action-color:#3398cc;
+  --white: white;
+  --main_background: #4eb7ff;
+}
+
+html{background:var(--main_background)}
+
+button{  
+  height: 40px;
+  
+  font-family: Helvetica, arial, serif;
+  color:black;
+  text-align:center;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid rgba(0,0,0,0.5);
+  border-bottom: 3px solid rgba(0,0,0,0.5);
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5), /* Exterior Shadow */
+    inset 0 1px rgba(255,255,255,0.3), /* Top light Line */
+    inset 0 10px rgba(255,255,255,0.2), /* Top Light Shadow */
+    inset 0 10px 20px rgba(255,255,255,0.25), /* Sides Light Shadow */
+    inset 0 -15px 30px rgba(0,0,0,0.3); /* Dark Background */
+  -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.5),
+    inset 0 1px rgba(255,255,255,0.3),
+    inset 0 10px rgba(255,255,255,0.2),
+    inset 0 10px 20px rgba(255,255,255,0.25),
+    inset 0 -15px 30px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 2px 8px rgba(0,0,0,0.5),
+    inset 0 1px rgba(255,255,255,0.3),
+    inset 0 10px rgba(255,255,255,0.2),
+    inset 0 10px 20px rgba(255,255,255,0.25),
+    inset 0 -15px 30px rgba(0,0,0,0.3);
+}

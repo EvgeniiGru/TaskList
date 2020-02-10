@@ -1,0 +1,120 @@
+.body{
+  height: 85vh;
+  width: 100vw;
+  background: var( --backgoundColor);
+  display:flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.form{
+  display: grid;
+  height: 30vh;
+  min-width: 35vw;
+  grid-template-areas: "login" 
+  "reg" 
+  "panel";
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  align-self: center;
+  justify-self: center;
+}
+
+.login{
+  grid-area: login;
+  width: 100%;
+  justify-content: center;
+  display: inline-flex;
+  height: 45%;
+  margin-block-start: 7%;
+}
+
+.value{
+  display: grid;
+  grid-template-areas:"LoginV"
+  "LoginErr";
+  width: 100%;
+  grid-template-rows: 1fr 1fr;
+
+}
+
+.error{
+  grid-area: LoginErr;
+  color:red;
+}
+
+
+.login_value{
+  grid-area: LoginV;
+  min-width: 200px;
+  background-color: inherit;
+  border:none;
+  border-bottom: 3px solid black;
+  font-size: 1em;
+}
+
+.login_err_value{
+  min-width: 200px;
+  background-color: inherit;
+  border:none;
+  border-bottom: 3px solid red;
+  font-size: 1em;
+
+}
+
+
+.login_value:active, .login_value:focus{
+  outline: 0;
+  outline-offset: 0;
+  background-color: white;
+  border-bottom: 3px solid black;
+
+}
+
+
+
+.password{
+  grid-area: reg;
+  width: 100%;
+  align-self: stretch;
+  justify-content: center;
+  display: inline-flex;
+  height: 45%;
+  margin-block-start: 7%;
+}
+
+
+.bt_panel{
+  grid-area: panel;
+  width: 100%;
+  align-self: stretch;
+  justify-content: flex-start;
+  height: 100%;
+  margin-block-start: 5%;
+}
+
+
+.bt_login{
+  width: 45%;
+  position: relative;
+  display: inline-block;
+  color: #777674;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: rgba(255,255,255,.5) 1px 1px, rgba(100,100,100,.3) 3px 7px 3px;
+  user-select: none;
+  padding: 1em 2em;
+  outline: none;
+  border-radius: 0;
+  background-image:
+   linear-gradient(45deg, rgba(255,255,255,.0) 30%, rgba(255,255,255,.8), rgba(255,255,255,.0) 70%),
+   linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 90%, rgba(255,255,255,.3)),
+   linear-gradient(to right, rgba(125,125,125,1), rgba(255,255,255,.9) 45%, rgba(125,125,125,.5)),
+   linear-gradient(to right, rgba(125,125,125,1), rgba(255,255,255,.9) 45%, rgba(125,125,125,.5)),
+   linear-gradient(to right, rgb(223, 170, 170), rgba(255,255,255,.9) 45%, rgba(223,190,170,.5)),
+   linear-gradient(to right, rgba(223,190,170,1), rgba(255,255,255,.9) 45%, rgba(223,190,170,.5));
+  background-repeat: no-repeat;
+  background-size: 200% 100%, auto, 100% 2px, 100% 2px, 100% 1px, 100% 1px;
+  background-position: 200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+  box-shadow: rgba(0,0,0,.5) 3px 10px 10px -10px;
+}
